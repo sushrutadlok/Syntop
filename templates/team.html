@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% block title %} Team
+{% endblock title %}
+{% block body %}
+
+
+
+<!-- {% comment %} Navigating bar {% endcomment %} -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">SynTop Engineering</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about">About</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          Utility
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/product">Product</a>
+          <a class="dropdown-item" href="/project">Resources</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="/contact">Visit</a>
+        </div>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/project">Applications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/team">Team & Support</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact Us</a>
+      </li>
+    </ul>
+    <div class="ak-container">
+      <div id="site-branding" class="clearfix">
+        <div style="float:right">
+          <span style="float:right">Contact No.: +91 9850675379</span><br>
+          <span style="float:right">Email ID : syntop.sales@gmail.com</span><br>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+  <div class="module-button ">
+    <a rv-on-click="content.setResultsPerPage" rv-data-results="10" data-event="click|search_result|results_per_page|10"
+      class="btn btn-light btn-sm" data-results="10"></a>
+    <div class="button-animation"></div>
+    <div class="button-content">
+      <span class="content-text">10</span>
+    </div>
+  </div>
+  <div class="module-button ">
+    <a rv-on-click="content.setResultsPerPage" rv-data-results="25" data-event="click|search_result|results_per_page|25"
+      class="btn btn-light btn-sm btn-ghost" data-results="25"></a>
+    <div class="button-animation"></div>
+    <div class="button-content">
+      <span class="content-text">25</span>
+    </div>
+  </div>
+  <div class="module-button ">
+    <a rv-on-click="content.setResultsPerPage" rv-data-results="50" data-event="click|search_result|results_per_page|50"
+      class="btn btn-light btn-sm btn-ghost" data-results="50"></a>
+    <div class="button-animation"></div>
+    <div class="button-content">
+      <span class="content-text">50</span>
+    </div>
+  </div>
+</div> -->
+
+{% endblock body %}

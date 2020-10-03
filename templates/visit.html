@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% block title %} Team
+{% endblock title %} 
+{% block body %}
+
+<!-- {% comment %} Navigating bar {% endcomment %} -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">SynTop Engineering</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">About</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Utility
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/project">Applications</a>
+            <a class="dropdown-item" href="/product">Product</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="/visit">Field Service</a>
+          </div>
+        </li>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/project">Applications</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="/team">Team & Support</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+      <strong>Email :</strong>syntop.sales@gmail.com<br>
+      <!-- {% comment %} <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form> {% endcomment %} -->
+    </div>
+  </nav>
+
+
+<div class="container py-3">
+<h4>Details for visit at your site.</h4>
+<p></p>
+<form method="post" action="/visit">{% csrf_token %}
+  <div class="form-group">
+  <div>
+    <label for="Customer_name">Customer Name</label>
+    <input type="integer" class="form-control" id="Customer_name" name="V_Name" placeholder="Name">
+  </div>
+  <div>
+    <label for="Company_name">Company Name</label>
+    <input type="integer" class="form-control" id="Company_name" name="V_Company" placeholder="Company Name">
+  </div>
+  <div>
+    <label for="C_Address">Address</label>
+    <input type="integer" class="form-control" id="C_Address" name="V_Address" placeholder="Address">
+  </div>
+  <div>
+    <label for="Contact_number">Contact Number</label>
+    <input type="integer" class="form-control" id="Contact_number" name="V_Contact" placeholder="Contact">
+  </div>
+  <div>
+    <label for="email_id">Email address</label>
+    <input type="email" class="form-control" id="email_id" name="V_email" placeholder="name@example.com">
+  </div>
+  <div class="form-group">
+    <label for="C_querys">Field Visit</label>
+    <select class="form-control" id="C_querys" name="V_query">
+      <option>Machine Maintenance</option>
+      <option>Troubleshooting</option>
+      <option>Machine Inspections</option>
+      <option>Commission</option>
+      <option>Projects Planning</option>
+      <option>Others</option>
+    </select>
+  </div>
+  <div class="desc">
+    <label for="C_desc">Details</label>
+    <textarea class="form-control" id="C_desc" name="V_desc" rows="3"></textarea>
+  </div>
+  <div class="container my-4">
+  <button type="submit" class="btn btn-danger">Send It</button>
+  </div>
+</form>
+</div>
+
+<div class="footer-top">
+    <div class="container py-5">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h4>Syntop Engineering<span></span></h4>
+          <p>
+            Sr. No. 147, Shop No. 2,<br>
+            Pawar Wasti, Thathwade Chowk<br>
+            Pune-411033 <br><br>
+            <strong>Phone:</strong>+91 8378092709<br>
+            <strong>Email :</strong>sushrut20syntop@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="/services">Services</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Servo Mechanisms</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Automation Products</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Tools and Accessories</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Automation Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Social Networks</h4>
+          <p>We are conneceted with top most MNC company, connected with goverment association.</p>
+          <div class="social-links mt-3">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-4">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Sushrut</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/bizland-bootstrap-business-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Sushrut</a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+{% endblock body %}
